@@ -1,0 +1,14 @@
+<h1>The homepage of nowhere</h1>
+<a href="{% url 'create:create' %}">New Post</a>
+
+<br/>
+<br/>
+
+{% for pole in p %}
+
+<a>UP</a>{{pole.vote_total}} <a>DOWN</a> - <a href="{{pole.url}}">{{pole.title}}</a>
+<br/>
+{{pole.pub_date}} by {{pole.author.username}}
+<br/>
+<br/>
+{% endfor %}

@@ -1,0 +1,23 @@
+<h1>NEW POST</h1>
+
+{%if err%}
+ {{err}}
+{%endif%}
+
+<form method="post" action="{% url 'create:create' %}">
+    {% csrf_token %}
+
+
+    <br/>
+    Title:
+    <br/>
+    <input type="text" name="title"/>
+    <br/>
+    <br/>
+    URL:
+    <br/>
+    <input type="text" name="url"/>
+    <br/>
+    <br/>
+    <input type="submit"  value ="POST"/>
+</form>
